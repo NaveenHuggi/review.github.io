@@ -83,6 +83,71 @@
             <ul>
                 <li>Use BFS for scenarios requiring level-order exploration (e.g., social networks).</li>
                 <li>Use DFS for scenarios requiring exhaustive exploration (e.g., puzzle-solving).</li>
+                <li>Code for BFS</li>
+                <p>
+                    #include <iostream>
+using namespace std;
+
+ void DFS(int start) {
+        vector<bool> visited(vertices, false);
+        cout << "DFS Traversal: ";
+        DFSUtil(start, visited);
+        cout << endl;
+    }
+
+    void DFSUtil(int v, vector<bool>& visited) {
+        visited[v] = true;
+        cout << v << " ";
+
+        for (int i = 0; i < vertices; i++) {
+            if (adjMatrix[v][i] == 1 && !visited[i]) {
+                DFSUtil(i, visited);
+            }
+        }
+    }
+
+void bfs(int m[10][10], int v, int source) {
+    int queue[20];
+    int front = 0, rear = 0, u, i;
+    int visited[10];
+
+    for (i = 0; i < v; i++)
+        visited[i] = 0;
+
+    queue[rear] = source;
+    visited[source] = 1;
+
+    cout << "The BFS Traversal is... \n";
+
+    while (front <= rear) {
+        u = queue[front];
+        cout << u << "\t";
+        front++;
+
+        for (i = 0; i < v; i++) {
+            if (m[u][i] == 1 && visited[i] == 0) {
+                visited[i] = 1;
+                rear++;
+                queue[rear] = i;
+            }
+        }
+    }
+}
+
+int main() {
+    int v = 5;
+    int m[10][10] = {{0,1,1,0,0}, {1,0,0,1,1},
+        {1,0,0,0,1}, {0,1,0,0,0}, {0,1,1,0,0}};
+
+    int source;
+    cout << "Enter the source vertex: ";
+    cin >> source;
+
+    bfs(m, v, source);
+
+    return 0;
+}                
+                </p>
             </ul>
 
             <h3>4. Heap</h3>
@@ -100,6 +165,90 @@
             <ul>
                 <li>Use binary heaps for simplicity and Fibonacci heaps for better amortized time complexity in specific cases.</li>
                 <li>Optimize heapify operations for large datasets.</li>
+                <li>Code for Heap</li>
+                <p>#include <bits/stdc++.h>
+using namespace std;
+
+class Heap {
+public:
+    int arr[100];
+    int size1;
+    Heap() {
+        arr[0] = -1;
+        size1 = 0;
+    }
+    void insert_heap(int val);
+    void display();
+    void delete_heap();
+};
+
+
+void Heap::insert_heap(int val) {
+    size1 = size1 + 1;
+    int index = size1;
+    arr[index] = val;
+    while (index > 1) {
+        int parent = index/2;
+        if (arr[parent]<arr[index])
+        {
+            swap(arr[parent], arr[index]);
+            index = parent;
+        }
+        else {
+            return;
+        }
+    }
+}
+
+void Heap::delete_heap()
+{
+    arr[1] = arr[size1];
+    int i = 1;
+    while(i<size1)
+    {
+        int li = 2*i;
+        int ri = 2*i +1;
+
+        if(i<li && arr[i]<arr[li])
+        {
+            swap(arr[i],arr[li]);
+            i = li;
+        }
+        if(i<ri && arr[i]<arr[ri])
+        {
+            swap(arr[i],arr[ri]);
+            i = ri;
+        }else{
+            return;
+        }
+        size1--;
+
+    }
+}
+
+void Heap::display() {
+    for (int i = 1; i <= size1; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    Heap h;
+    h.insert_heap(7);
+    h.insert_heap(12);
+    h.insert_heap(5);
+    h.insert_heap(15);
+    h.insert_heap(10);
+    h.insert_heap(20);
+    h.delete_heap();
+
+    cout << "Heap elements after insertion: ";
+    h.display();
+    cout<<h.arr[1]<<endl;
+    return 0;
+}
+                </p>
             </ul>
 
             <h3>5. Sorting</h3>
@@ -117,6 +266,44 @@
             <ul>
                 <li>Use quicksort for average-case performance, mergesort for stability, and heapsort for memory efficiency.</li>
                 <li>Consider parallel sorting techniques for very large datasets.</li>
+                <li>Code for Sorting </li>
+                <p>
+
+                  void Sorting::Bubble_sort(int A[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n-i-1;j++)
+        {
+            if(A[j]>A[j+1])
+            {
+                swap(A[j],A[j+1]);
+            }
+        }
+    }
+
+}
+
+void Sorting::Selection_sort(int A[],int n)
+{
+    for(int i = 0;i<n-1;i++)
+    {
+        int smallest = i;
+        for (int j =i;j<n;j++)
+        {
+            if(A[j]<A[smallest])
+            {
+                smallest = j;
+            }
+        }
+        if(smallest != i)
+        {
+          swap(A[i],A[smallest]);
+        }
+
+    }
+}  
+                </p>
             </ul>
 
             <h3>6. Pattern Searching</h3>
