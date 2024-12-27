@@ -11,11 +11,7 @@ body {
     background: linear-gradient(to bottom, #e3ffe7, #d9e7ff);
     color: #333;
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
+    padding: 20px 0; /* Add vertical padding */
 }
 
 /* Navigation Bar */
@@ -57,9 +53,12 @@ header {
     color: white;
     padding: 2rem;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto; /* Center horizontally */
 }
 
 header h1 {
@@ -82,8 +81,8 @@ section {
     max-width: 800px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin: 20px auto; /* Center horizontally and add space between sections */
     text-align: center;
-    margin-top: 30px;
     line-height: 1.6;
 }
 
@@ -164,11 +163,7 @@ blockquote {
         gap: 10px;
     }
 
-    section {
-        padding: 1.5rem;
-    }
-
-    header {
+    header, section {
         padding: 1.5rem;
     }
 
