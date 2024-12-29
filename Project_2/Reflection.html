@@ -99,7 +99,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-      <main>
+       <main>
         <section id="nature-problems">
             <h2>Problems in Nature</h2>
             <p>
@@ -126,32 +126,48 @@
         </section>
 
         <section id="design-principles">
-            <h2>Takeaways from Design Principles</h2>
-            <p>
-                The following principles have been pivotal in algorithm design:
-                <ul>
-                    <li><strong>Divide and Conquer:</strong> Splitting problems into sub-problems, as seen in Merge Sort and Quick Sort.</li>
-                    <li><strong>Greedy Algorithms:</strong> Used in scenarios like event scheduling, where immediate decisions lead to optimal solutions.</li>
-                    <li><strong>Dynamic Programming:</strong> Techniques like the Knapsack Problem illustrate the power of memoization to solve overlapping sub-problems.</li>
-                    <li><strong>Backtracking:</strong> Finding valid Sudoku solutions or optimal travel itineraries demonstrates its power.</li>
-                </ul>
-                These strategies not only streamline problem-solving but also build a structured approach to tackling real-world challenges.
-            </p>
+            <h2>Asymptotic Analysis</h2>
+            <p>Asymptotic analysis is a crucial technique for evaluating the efficiency of algorithms. It focuses on how the running time or space usage of an algorithm changes as the input size grows arbitrarily large. This allows us to compare algorithms and predict their performance for different input sizes, without needing to implement and test them on specific hardware.</p>
+
+            <p><strong>Big O Notation:</strong> The most common notation for expressing asymptotic upper bounds is Big O notation. It provides an upper bound on the growth rate of an algorithm's resource usage (time or space) as the input size increases. For example, if an algorithm has a time complexity of O(n), it means that the running time grows linearly with the input size.</p>
+
+            <p><strong>Benefits of Asymptotic Analysis:</strong></p>
+            <ul>
+                <li><strong>Algorithm Comparison:</strong> Enables informed decisions on which algorithm is more efficient for a given problem and input size.</li>
+                <li><strong>Predictive Power:</strong> Allows us to predict the performance of an algorithm on large datasets without the need for extensive testing.</li>
+                <li><strong>Algorithm Improvement:</strong> Guides the design and refinement of algorithms by identifying areas for optimization.</li>
+            </ul>
         </section>
 
         <section id="tree-structures">
-            <h2>Hierarchical Data - Trees</h2>
-            <p>
-                Tree data structures are crucial for organizing hierarchical information:
-                <ul>
-                    <li><strong>Binary Trees:</strong> Optimize data search and retrieval operations.</li>
-                    <li><strong>AVL Trees:</strong> Maintain balance for efficient operations in database indexing.</li>
-                    <li><strong>Red-Black Trees:</strong> Ensure balance in applications like memory allocation.</li>
-                    <li><strong>Heap:</strong> Priority queues in operating systems or real-time schedulers use heaps.</li>
-                    <li><strong>Trie:</strong> Powering autocomplete features in search engines by optimizing prefix-based queries.</li>
-                </ul>
-                These structures underpin many applications, from search engines to operating systems.
-            </p>
+            <h2>Algorithm Design Techniques</h2>
+            <p>Algorithm design techniques are systematic approaches to solving problems by breaking them down into smaller, more manageable subproblems and then combining the solutions to these subproblems to obtain the overall solution.</p>
+
+            <p>Some of the key algorithmic design techniques include:</p>
+            <ul>
+                <li><strong>Divide-and-Conquer:</strong> This technique involves dividing the problem into smaller subproblems, solving the subproblems recursively, and then combining the solutions to obtain the overall solution.
+                    <ul>
+                        <li><strong>Example:</strong> Merge Sort, Quick Sort, Binary Search</li>
+                    </ul>
+                </li>
+                <li><strong>Greedy Algorithms:</strong> Greedy algorithms make locally optimal choices at each step with the hope of finding a global optimum.
+                    <ul>
+                        <li><strong>Example:</strong> Dijkstra's algorithm for shortest paths, Huffman coding</li>
+                    </ul>
+                </li>
+                <li><strong>Dynamic Programming:</strong> This technique is used when the optimal solution to a problem can be expressed as a combination of optimal solutions to subproblems.
+                    <ul>
+                        <li><strong>Example:</strong> Fibonacci sequence, Knapsack problem</li>
+                    </ul>
+                </li>
+                <li><strong>Backtracking:</strong> This technique involves exploring all possible solutions to a problem by systematically trying different combinations of choices and discarding paths that do not lead to a solution.
+                    <ul>
+                        <li><strong>Example:</strong> N-Queens problem, Sudoku solver</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>By understanding these techniques, we can approach problem-solving in a more structured and systematic way, increasing our chances of finding efficient and effective solutions.</p>
         </section>
 
         <section id="array-queries">
@@ -203,7 +219,7 @@
         <section id="design-techniques">
             <h2>Algorithm Design Techniques</h2>
             <p>
-                Algorithm design techniques like brute force, divide-and-conquer, dynamic programming, and greedy approaches are invaluable in solving complex computational problems. 
+                Algorithm design techniques like brute force, divide-and-conquer, dynamic programming, and greedy approaches are invaluable in solving complex computational problems.
                 <ul>
                     <li><strong>Examples:</strong> From string matching with Rabin-Karp to efficient resource allocation, design techniques guide solutions.</li>
                     <li><strong>Takeaway:</strong> The choice of design approach balances simplicity, optimization, and scalability.</li>
