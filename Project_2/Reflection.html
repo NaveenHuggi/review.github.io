@@ -4,11 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Project - Design and Analysis of Algorithms</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #ffdf00;
+            border-bottom: 2px solid #ffdf00;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #333;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        ul li:hover {
+            transform: scale(1.05);
+            background: #555;
+        }
+
+        a {
+            color: #ffdf00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 30px;
+            border-top: 2px solid #ffdf00;
+        }
+
+        footer p {
+            margin: 0;
+            color: #ffdf00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            ul li {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            ul li {
+                font-size: 0.8em;
+                padding: 8px;
+            }
+        }
+    </style>
 </head>
 <body>
-   
     <main>
         <section id="nature-problems">
             <h2>Problems in Nature</h2>
@@ -127,4 +228,3 @@
     </footer>
 </body>
 </html>
-
