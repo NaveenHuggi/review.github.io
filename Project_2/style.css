@@ -3,65 +3,96 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
-    color: #333;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Gradient Background */
+    color: #fff;
 }
 
 /* Header */
 header {
-    background: #2a2a72; /* Deep Blue Color */
-    color: #fff;
+    background: rgba(0, 0, 0, 0.8); /* Transparent Black */
     padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    background: #111;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00c9ff;
 }
 
 /* Main Content */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 2rem auto;
-    padding: 1.5rem;
-    background: #fff;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent White */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-h1, h2 {
-    color: #333;
+h1, h2, h3 {
     text-align: center;
+    color: #111;
 }
 
 h2 {
     margin-top: 1.5rem;
-    font-weight: 600;
-    color: #444;
 }
 
-p {
+p, ul {
     line-height: 1.8;
     margin: 1rem 0;
     text-align: justify;
 }
 
 ul {
-    list-style: square;
-    margin: 1rem 0;
     padding-left: 2rem;
 }
 
 ul li {
     margin: 0.5rem 0;
-    line-height: 1.5;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #666;
     padding: 1rem 0;
-    background: #2a2a72;
-    color: #fff;
-    border-top: 3px solid #444;
+    margin-top: 2rem;
+    background: #111;
+    color: #f9f9f9;
+    font-size: 0.9rem;
+    border-top: 3px solid #333;
 }
